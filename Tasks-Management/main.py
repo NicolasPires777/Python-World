@@ -1,6 +1,10 @@
-from utils import Utils as U
+from utils.messages import welcome_message, list_options
+from utils.input_handler import receive_input
 
-U.welcome_message()
-U.list_options()
+# Exibe a mensagem de boas-vindas e lista as opções
+welcome_message()
+list_options()
+
+# Recebe a opção do usuário
 value = int(input("Choose an option: "))
-U.receive_input(value)
+receive_input(value)
