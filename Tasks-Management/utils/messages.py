@@ -18,7 +18,7 @@ def welcome_message():
 
 def list_options():
     options = """
-    *Choose an option:*
+    *Options:*
 
     *1 - Add Task*
     *2 - List Tasks*

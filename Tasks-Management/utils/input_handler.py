@@ -6,11 +6,18 @@ def receive_input(value):
     if value == 1:
         name, day, month, year, hour, minute, priority = form_create_task()
         TMa.create_task(name, year, month, day, hour, minute, priority)
+        return True
+    elif value == 2:
+        TMa.list_tasks()
+        return True
+    elif value == 6:
+        return False
     else:
         print("This option doesn't exist")
+        return True
 
 def form_create_task():
-    name = input("Name:")
+    name = input("Name: ")
     date = input("Date(dd/mm/yyyy hh:mm): ")
     priority = input("Priority(Low - Medium - High): ")
 
@@ -29,7 +36,12 @@ def form_create_task():
         print("The priority must be Low, Medium or High (Retry in 2 seconds)")
         sleep(2)
         priority = input("Priority: ")
-        fomated_priority = format_string(priority)
+        formated_priority = V.format_string(priority)
 
     day, month, year, hour, minute = V.extract_date_components(date)
+    print("Saving...")
+    sleep(1)
+    print("Sucessfull! Redirecting...")
+    sleep(1)
+    print("")
     return name, day, month, year, hour, minute, formated_priority
