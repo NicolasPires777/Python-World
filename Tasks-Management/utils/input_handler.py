@@ -8,7 +8,10 @@ def receive_input(value):
         TMa.create_task(name, year, month, day, hour, minute, priority)
         return True
     elif value == 2:
-        TMa.list_tasks()
+        TMa.list_tasks_by_priority()
+        return True
+    elif value == 3:
+        form_delete_task()
         return True
     elif value == 6:
         return False
@@ -45,3 +48,11 @@ def form_create_task():
     sleep(1)
     print("")
     return name, day, month, year, hour, minute, formated_priority
+
+def form_delete_task():
+    print(f"Here is your tasks: ")
+    sleep(1)
+    TMa.list_tasks()
+    sleep(1)
+    delete = int(input("Which task do you want to delete?: "))
+    TMa.remove_task(delete-1)
