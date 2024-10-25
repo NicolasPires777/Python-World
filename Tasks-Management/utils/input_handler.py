@@ -13,6 +13,9 @@ def receive_input(value):
     elif value == 3:
         form_delete_task()
         return True
+    elif value == 5:
+        form_update_task()
+        return True
     elif value == 6:
         return False
     else:
@@ -56,3 +59,11 @@ def form_delete_task():
     sleep(1)
     delete = int(input("Which task do you want to delete?: "))
     TMa.remove_task(delete-1)
+
+def form_update_task():
+    print(f"Here is your tasks: ")
+    sleep(1)
+    TMa.list_tasks()
+    sleep(1)
+    update = int(input("Which task do you want to update?: "))
+    TMa.update_task(update-1)

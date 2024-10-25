@@ -2,6 +2,7 @@ from datetime import datetime
 from time import sleep
 from model import Task as T
 from storage import Storage as S
+from . import input_handler as I
 
 def create_task(name, year, month, day, hour, minute, priority):
     task = T.Task(name, datetime(year, month, day, hour, minute), priority)
@@ -47,6 +48,19 @@ def remove_task(num):
         del S.task_list[num]
         print("Task deleted! Returning to menu...")
         sleep(2)
+        return True
+    except Exception as e:
+        print(f"Error: {e}")
+        return False   
+
+def update_task(num):
+    try:    
+        task = S.task_list[num]
+        print(f"Selected task: {task.name}")
+        sleep(1)
+        name, day, month, year, hour, minute, priority = I.form_create_task()
+        create_task(name, year, month, day, hour, minute, priority)
+        del S.task_list[num]
         return True
     except Exception as e:
         print(f"Error: {e}")
