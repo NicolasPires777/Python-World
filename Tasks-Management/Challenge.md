@@ -39,6 +39,6 @@ list_tasks()
 # 3. Exercise - 17/10/2024 - Priority: Low
 
 # Filtering high-priority tasks
-filter_tasks_by_priority("high")
+filter_tasks_by_priority("medium")
 # Output:
-# 1. Buy milk - 17/10/2024 - Priority: High
+# 1. Buy milk - 17/10/2024 - Priority: Medium
