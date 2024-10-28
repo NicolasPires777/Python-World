@@ -82,4 +82,10 @@ def form_search_task():
     else:
         print("Option not found, returning to menu...")
         sleep(1.5)
+    print(f"Tasks found:")
+    i = 0
+    for task in tasks:
+        print(f"{i+1} - {task.name}\nDate: {task.date}\nPriority: {task.priority}\n")
+        i+=1
+    sleep(2)
     
