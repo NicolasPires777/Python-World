@@ -85,7 +85,7 @@ def form_search_task():
     print(f"Tasks found:")
     i = 0
     for task in tasks:
-        print(f"{i+1} - {task.name}\nDate: {task.date}\nPriority: {task.priority}\n")
         i+=1
+        print(f"{i} - {task.name}\nDate: {task.date}\nPriority: {task.priority}\n")
     sleep(2)
     
