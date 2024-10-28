@@ -64,4 +64,16 @@ def update_task(num):
         return True
     except Exception as e:
         print(f"Error: {e}")
-        return False          
+        return False        
+
+def search_by_name(name):
+    try:
+        tasks = []
+        for task in S.task_list:
+            if task.name.lower() == name.lower():
+                tasks.append(task)
+        return tasks
+
+    except Exception as e:
+        print(f"Error: {e}")
+        return False  

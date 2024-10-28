@@ -13,6 +13,9 @@ def receive_input(value):
     elif value == 3:
         form_delete_task()
         return True
+    elif value == 4:
+        form_search_task()
+        return True
     elif value == 5:
         form_update_task()
         return True
@@ -67,3 +70,16 @@ def form_update_task():
     sleep(1)
     update = int(input("Which task do you want to update?: "))
     TMa.update_task(update-1)
+
+def form_search_task():
+    decision = int(input("Which field do you want to use as a filter?\n1 - Name\n2 - Date\nDecision: "))
+    if decision == 1:
+        name = input("What's the name of the task?: ")
+        tasks = TMa.search_by_name(name)
+    elif decision == 2: 
+        date = input("What's the date of the task? (yyyy-mm-dd): ")
+        tasks = TMa.search_by_date(date)
+    else:
+        print("Option not found, returning to menu...")
+        sleep(1.5)
+    
