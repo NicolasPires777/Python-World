@@ -12,7 +12,7 @@ def welcome_message():
     *   {Fore.MAGENTA}Manage deadlines, prioritize tasks,      *
     *   and keep track of your progress easily.{Fore.CYAN}  *
     *                                            *
-    **********************************************
+    ********************************************** 
     """
     print(message)
 
