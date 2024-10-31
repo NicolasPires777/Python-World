@@ -17,8 +17,4 @@ Feel free to explore each folder, check out the challenges, and see how I approa
 2. Open the `challenge.md` to read the problem description.
 3. Check out my Python solution to see how I tackled it.
 
-## Contributing
-
-If you'd like to suggest improvements or offer alternative solutions, feel free to fork the repository and submit a pull request. All contributions are welcome!
-
 ## Have fun coding! 💻🐍
